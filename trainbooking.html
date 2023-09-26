@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>M-TICKET DATABASE</title>
+    <style>
+        <link rel="stylesheet" href='index.css'>
+        <link rel="shortcut icon" href="logofig.jpg" />
+        table#database_table {
+            font-size: 16px;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        #database_table td, #database_table th {
+            border: 1px solid #ddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        #database_table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #database_table th {
+            padding-top: 11px;
+            padding-bottom: 11px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>
+        <center>
+            <b>
+                <img src="https://img.icons8.com/nolan/64/database.png"/> USER'S TRAIN BOOKINGS
+                <img src="https://img.icons8.com/ultraviolet/60/000000/train.png"/>
+            </b>
+        </center>
+    </h2>
+    <div class="container">
+        <br />
+        <table id="database_table" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Date & Time</th>
+                    <th>Booking ID</th>
+                    <th>Name</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Class</th>
+                    <th>Type</th>
+                    <th>Amount Paid</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- PHP loop removed -->
+                <tr>
+                    <td>Sample Date</td>
+                    <td>Sample Booking ID</td>
+                    <td>Sample Name</td>
+                    <td>Sample Source</td>
+                    <td>Sample Destination</td>
+                    <td>Sample Class</td>
+                    <td>Sample Type</td>
+                    <td>₹&nbsp;&nbsp;Sample Amount</td>
+                    <td>
+                        <a href="print.php?pid=SampleBookingID" target="_blank">Click Here</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        // JavaScript code, if any, should be placed here
+    </script>
+</body>
+</html>

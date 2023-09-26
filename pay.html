@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel='stylesheet' href='index.css'>
+    <style>
+        /* Add your CSS styles here */
+        .formm {
+            font-family: Montserrat, sans-serif;
+            font-size: 18px !important;
+        }
+
+        /* You can link external CSS files here if needed */
+        /* <link rel="stylesheet" href="your-stylesheet.css"> */
+    </style>
+    <link rel="shortcut icon" href="logofig.jpg" />
+    <title>Registration Page</title>
+    <!-- Add links to external CSS frameworks or libraries here if needed -->
+    <!-- Example: Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <style>
+        /* Popup styles */
+        #popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body style="background-color: F5F1F0;">
+    <div class="formm">
+        <h2 align="center"><b>Enter Payment Details:</b></h2>
+
+        <!--<center><img src="logohead.png" width='35%'></center> -->
+        <form method="post">
+            <!-- Your form here -->
+            <table align="center">
+                <tr>
+                    <td><h3>Card No.:</h3></td>
+                    <td colspan='2'><input type="Number" name="cno" placeholder="1111-2222-3333-4444" maxlength='50'></td>
+                </tr>
+                <tr>
+                    <td><h3>Name on Card:</h3></td>
+                    <td colspan='2'><input type="Text" name="name" placeholder="Pratik Patil" maxlength='50'></td>
+                </tr>
+                <tr>
+                    <td><h3>Expiry Date:</h3></td>
+                    <td><input type="Number" name="Em" placeholder='MM' maxlength='2'></td>
+                    <td><input type="Number" name="Ey" placeholder='YY' maxlength='2'></td>
+                </tr>
+                <tr>
+                    <td><h3>CVV No:</td></h3>
+                    <td colspan='2'><input type="Password" name="Cvv" maxlength='3'></td>
+                </tr>
+                <tr>
+                    <td><h3>PIN NO:</h3></td>
+                    <td colspan='2'><input type="Password" name="Pin" maxlength='4'></td>
+                </tr>
+                <tr>
+                    <td colspan='3'><center><button style="background-color:black ; border-color:black" type='button' name='register_submit' onclick="showPopup()">Complete Payment</button><center>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <br>
+</div>
+
+<!-- Popup message -->
+<div id="popup">
+    <div class="popup-content">
+        <span class="close-button" onclick="closePopup()">&times;</span>
+        <h2>Booking Successful</h2>
+        <p>Your booking has been completed successfully.</p>
+        <button style="background-color: black; color: white; padding: 10px 20px; margin-right: 10px;" onclick="redirectToIndex()">Go to Index</button>
+        <button style="background-color: black; color: white; padding: 10px 20px;" onclick="redirectToBook()">Print Ticket</button>
+    </div>
+</div>
+
+<script>
+    function showPopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+    }
+
+    function closePopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "none";
+    }
+
+    function redirectToIndex() {
+        window.location.href = "index.html";
+    }
+
+    function redirectToBook() {
+        window.location.href = "print.html";
+    }
+</script>
+<!-- Include any external JavaScript files here if needed -->
+<!-- Example: <script src="your-script.js"></script> -->
+</body>
+
+</html>
